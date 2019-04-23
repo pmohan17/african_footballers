@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>African Footballers</h1>
+<h3>How many African soccer players can you name? With the large popularity of European soccer, it seems as though many talented African players are being missed. Click on each name and learn something about them! <h3>
+
+<h3> Please note, the order from this list was taken from the <a href="https://bleacherreport.com/articles/1781781-the-50-greatest-african-players-of-all-time"> Bleacher Report's </a>list of 50 greatest African players. Order came based on awards won and other factors. </h3>
+
+
+
+
+
+
+
+
+
+<ul>
+  {% for pair in pairs %}
+      <li><a href="{{ url_for( 'info', num=pair[0] ) }}">{{ pair[1] }}</a></li>
+  {% endfor %}
+  </ul>
+<footer> Created by Priya Mohan for Advanced Web Apps.</footer>
+{% endblock %}

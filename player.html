@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>A little about {{ play['Name'] }}</h1>
+
+<p>{{ play['Name'] }} was born on {{ play['Birth'] }}. He is from {{ play['Country'] }}. The last club team he played for was {{ play['Club'] }}. Currently, he is {{ play['Current'] }}</p>
+
+<p><a href="{{ url_for('index') }}">Return to the list</a></p>
+{% endblock %}
